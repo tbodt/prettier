@@ -241,7 +241,7 @@ const babelExpression = /* @__PURE__ */ createBabelParser({
 });
 const babelTSExpression = /* @__PURE__ */ createBabelParser({
   isExpression: true,
-  optionsCombinations: [appendPlugins(["typescript"])],
+  optionsCombinations: [appendPlugins(["jsx", "typescript"])],
 });
 const babelFlow = /* @__PURE__ */ createBabelParser({
   optionsCombinations: [
@@ -259,6 +259,9 @@ export {
   babel,
   babelFlow as "babel-flow",
   babelTs as "babel-ts",
+
+  babelExpression as "babel-expression",
+  babelTSExpression as "babel-ts-expression",
 
   /** @internal */
   babelExpression as __js_expression,
